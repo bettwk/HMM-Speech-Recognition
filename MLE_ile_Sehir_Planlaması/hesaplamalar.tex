@@ -1,0 +1,7 @@
+$$P(k|\lambda) = \frac{e^{-\lambda} \cdot \lambda^k}{k!} , \quad k \in \{0, 1, \dots, \infty\}, \quad \lambda > 0$$
+$$l(\lambda | k_1, k_2, \dots, k_n) = P(K=k_1 | \lambda) \cdot P(K=k_2 | \lambda) \dots P(K=k_n | \lambda)$$
+$$l(\lambda | k_1, k_2, \dots, k_n) = \frac{e^{-\lambda} \cdot \lambda^{k_1}}{(k_1)!} \cdot \frac{e^{-\lambda} \cdot \lambda^{k_2}}{(k_2)!} \dots \frac{e^{-\lambda} \cdot \lambda^{k_n}}{(k_n)!} = \frac{e^{-n\lambda} \cdot \lambda^{k_1+k_2+\dots+k_n}}{(k_1)! \cdot (k_2)! \dots (k_n)!}$$
+$$l(\lambda | k_1, k_2, \dots, k_n) = \frac{e^{-n\lambda} \cdot \lambda^{\sum_{i=1}^{n} k_i}}{\prod_{i=1}^{n} k_i!}$$
+$$\ln l(\lambda | k_1, k_2, \dots, k_n) = -n\lambda + \left(\sum_{i=1}^{n} k_i\right) \cdot \ln \lambda - \ln \left(\prod_{i=1}^{n} k_i!\right)$$
+$$\frac{d}{d\lambda} \ln l(\lambda | k_1, k_2, \dots, k_n) = \frac{d}{d\lambda} \left( -n\lambda + \left(\sum_{i=1}^{n} k_i\right) \cdot \ln \lambda - \ln \left(\prod_{i=1}^{n} k_i!\right) \right)$$
+$$\hat{\lambda}_{MLE} = \frac{\sum_{i=1}^{n} k_i}{n}$$
